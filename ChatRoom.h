@@ -1,9 +1,11 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
-#include "User.h"
+// #include "User.h"
 #include <string>
+#include <vector>
 
+class User;
 
 
 class ChatRoom{
@@ -16,6 +18,7 @@ class ChatRoom{
         virtual void removeUser(User* user) = 0;
         virtual void sendMessage(std::string message, User* fromUser) = 0;
         virtual void saveMessage(std::string message, User* fromUser) = 0;
+        const std::vector<std::string>& getChatHistory() const;
 
 };
 

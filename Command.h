@@ -2,12 +2,10 @@
 #define COMMAND_H
 
 #include <string>
-// #include "Command.h"
-#include "ChatRoom.h"
-#include "SaveMessageCommand.h"
-#include "SendMessageCommand.h"
-#include "User.h"
 
+
+class User;
+class ChatRoom;
 
 class Command {
     protected: 
@@ -18,6 +16,7 @@ class Command {
     public: 
         Command(User* user, std::string message, ChatRoom* room);
         virtual void execute() = 0;
+        virtual ~Command() = default;
 
 };
 

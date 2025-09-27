@@ -14,6 +14,7 @@ class CtrlCat: public ChatRoom {
         void removeUser(User* user);
         void sendMessage(std::string message, User* fromUser);
         void saveMessage(std::string message, User* fromUser);
+        // const std::vector<std::string>& getChatHistory() const;
 
 };
 

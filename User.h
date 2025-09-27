@@ -4,10 +4,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Command.h"
-#include "ChatRoom.h"
 
-// #include "User.h"
+class ChatRoom;
+class Command;
 
 
 class User {
@@ -18,10 +17,12 @@ class User {
 
     public:     
         User(std::string name);
+        virtual ~User();
         void send(std::string message, ChatRoom* room);
         void receive(std::string message, User* fromUser, ChatRoom* room);
         void addCommand(Command* command);
         void executeAll();
+        void addChatRoom(ChatRoom* chatRoom);
         std::string getName();
 
 };

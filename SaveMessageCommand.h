@@ -2,8 +2,10 @@
 #define SAVEMESSAGECOMMAND_H
 
 #include "Command.h"
-// #include "ChatRoom.h"
+#include <string>
 
+class User;
+class ChatRoom;
 
 class SaveMessageCommand : public Command
 {

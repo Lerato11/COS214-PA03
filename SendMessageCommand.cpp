@@ -1,4 +1,5 @@
 #include "SendMessageCommand.h"
+#include "ChatRoom.h" 
 
 SendMessageCommand::SendMessageCommand(User* user, std::string message, ChatRoom* room): Command(user, message, room){
 
