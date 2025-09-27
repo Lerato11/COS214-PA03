@@ -6,7 +6,8 @@
 
 class PlayboiCarti : public User{
 
-    
+    public:
+        PlayboiCarti();
 };
 
 #endif

@@ -6,7 +6,8 @@
 
 class KenCarson : public User{
 
-    
+    public:
+        KenCarson();
 };
 
 #endif

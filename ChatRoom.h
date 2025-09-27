@@ -8,14 +8,14 @@
 
 class ChatRoom{
     private: 
-        User* users; 
-        std::string* chatHistory; 
+        std::vector<User*> users;
+        std::vector<std::string> chatHistory; 
 
     public:
         void registerUser(User user);
         void removeUser(User user);
-        void sendMessage(std::string message, User fromUser);
-        void saveMessage(std::string message, User fromUser);
+        void sendMessage(std::string message, User* fromUser);
+        void saveMessage(std::string message, User* fromUser);
 
 };
 

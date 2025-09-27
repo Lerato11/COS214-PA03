@@ -11,12 +11,13 @@
 
 class Command {
     protected: 
-        ChatRoom room;
+        ChatRoom* room;
         std::string message;
-        User fromUser;
+        User* fromUser;
 
     public: 
-        void execute();
+        Command(User* user, std::string message, ChatRoom* room);
+        virtual void execute() = 0;
 
 };
 

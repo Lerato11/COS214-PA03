@@ -6,7 +6,8 @@
 
 class DestroyLonely : public User{
 
-    
+    public:
+        DestroyLonely();
 };
 
 #endif
