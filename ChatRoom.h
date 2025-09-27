@@ -7,15 +7,15 @@
 
 
 class ChatRoom{
-    private: 
+    protected: // made protected so they can be accessed in subclasses
         std::vector<User*> users;
         std::vector<std::string> chatHistory; 
 
     public:
-        void registerUser(User user);
-        void removeUser(User user);
-        void sendMessage(std::string message, User* fromUser);
-        void saveMessage(std::string message, User* fromUser);
+        virtual void registerUser(User user) = 0;
+        virtual void removeUser(User user) = 0;
+        virtual void sendMessage(std::string message, User* fromUser) = 0;
+        virtual void saveMessage(std::string message, User* fromUser) = 0;
 
 };
 

@@ -18,10 +18,11 @@ class User {
 
     public:     
         User(std::string name);
-        void send(std::string message, ChatRoom room);
-        void receive(std::string message, User fromUser, ChatRoom room);
+        void send(std::string message, ChatRoom* room);
+        void receive(std::string message, User* fromUser, ChatRoom* room);
         void addCommand(Command* command);
         void executeAll();
+        std::string getName();
 
 };
 

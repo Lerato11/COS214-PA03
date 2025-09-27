@@ -6,11 +6,11 @@ User::User(std::string name): name(name){
 }
 
 
-void User::send(std::string message, ChatRoom room){
+void User::send(std::string message, ChatRoom* room){
 
     // create both commands (objects)
-    Command* sendMessCmnd = new SendMessageCommand();
-    Command* saveMessCmnd = new SaveMessageCommand();
+    Command* sendMessCmnd = new SendMessageCommand(this, message, room);
+    Command* saveMessCmnd = new SaveMessageCommand(this, message, room);
 
     // add them to the command queue
     addCommand(sendMessCmnd);
@@ -21,9 +21,9 @@ void User::send(std::string message, ChatRoom room){
 }
 
 
-void User::receive(std::string message, User fromUser, ChatRoom room){
-    
-    std::cout << "*** User received the message from: " << fromUser.name << " ***" << std::endl;
+void User::receive(std::string message, User* fromUser, ChatRoom* room){
+
+    std::cout << "*** User received the message from: " << fromUser->getName() << " ***" << std::endl;
     std::cout << "Message: " << message << std::endl;
     
 }
@@ -45,4 +45,8 @@ void User::executeAll(){
     }
 
     commandQueue.clear();
+}
+
+std::string User::getName(){
+    return this->name;
 }
