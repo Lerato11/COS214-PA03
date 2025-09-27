@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <list>
+#include <vector>
 #include "Command.h"
 #include "ChatRoom.h"
 
@@ -12,7 +12,7 @@
 
 class User {
     protected: 
-        ChatRoom* chatRooms;
+        std::vector<ChatRoom*> chatRooms; //used an std::vector
         std::string name;
         std::vector<Command*> commandQueue; //used an std::vector
 

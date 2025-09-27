@@ -12,8 +12,8 @@ class ChatRoom{
         std::vector<std::string> chatHistory; 
 
     public:
-        virtual void registerUser(User user) = 0;
-        virtual void removeUser(User user) = 0;
+        virtual void registerUser(User* user) = 0;
+        virtual void removeUser(User* user) = 0;
         virtual void sendMessage(std::string message, User* fromUser) = 0;
         virtual void saveMessage(std::string message, User* fromUser) = 0;
 

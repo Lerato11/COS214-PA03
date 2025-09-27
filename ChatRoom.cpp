@@ -1,5 +1,20 @@
 #include "ChatRoom.h"
 
-// ChatRoom::registerUser({
 
-// }
+void ChatRoom::registerUser(User* user){
+   
+}
+
+void ChatRoom::removeUser(User* user) {
+    
+}
+
+
+void ChatRoom::sendMessage(std::string message, User* fromUser) {
+    
+}
+
+
+void ChatRoom::saveMessage(std::string message, User* fromUser) {
+    
+}
