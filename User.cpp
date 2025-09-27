@@ -67,4 +67,6 @@ User::~User() {
         delete commandQueue[i];
     }
 
+    commandQueue.clear();
+
 }
